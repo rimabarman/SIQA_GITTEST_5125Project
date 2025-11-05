@@ -8,16 +8,24 @@ packages:
   gitUsername: rimabarman
   gitBranch: main
 - name: TPP_services_in_FCS
+  version: "1.0"
   gitServerName: SIQA_KVV_IBM
   gitUrl: https://github.com/Karthik-V-IBM-10
   gitUsername: Karthik-V-IBM-10
   gitBranch: main
+- name: SIQA_OriginTest_OnPremAssets
+  gitServerName: rimaSCName
+  gitUrl: https://github.com/vijetadixit
+  gitUsername: rimabarman
+  gitBranch: Test
 services:
 - serviceName: project.siqa_gittest_5125.integrations:AlertsCRTandERT
   packages:
   - name: SIQA_GITTEST_5125Project
     version: "1.0"
   - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: SIQA_OriginTest_OnPremAssets
     version: "1.0"
 - serviceName: pub.alert:emit
   packages:
@@ -28,6 +36,8 @@ services:
   - name: SIQA_GITTEST_5125Project
     version: "1.0"
   - name: TPP_services_in_FCS
+    version: "1.0"
+  - name: SIQA_OriginTest_OnPremAssets
     version: "1.0"
 - serviceName: pub.string:stringToBytes
   packages:
